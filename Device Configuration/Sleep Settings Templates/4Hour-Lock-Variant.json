@@ -1,0 +1,35 @@
+{
+  "@odata.type": "#microsoft.graph.windows10CustomConfiguration",
+  "displayName": "4-Hour Lock Variant - No Screen Saver",
+  "description": "4-hour variant: Lock screen after 4 hours of inactivity with no screen saver",
+  "omaSettings": [
+    {
+      "@odata.type": "#microsoft.graph.omaSettingInteger",
+      "displayName": "Lock timeout (minutes)",
+      "description": "Specifies the period of inactivity (4 hours = 240 minutes) before the device locks",
+      "omaUri": "./Device/Vendor/MSFT/Policy/Config/DeviceLock/MaxInactivityTimeDeviceLock",
+      "value": 240
+    },
+    {
+      "@odata.type": "#microsoft.graph.omaSettingString",
+      "displayName": "Disable screen saver",
+      "description": "Disables the screen saver",
+      "omaUri": "./User/Vendor/MSFT/Policy/Config/ControlPolicyConflict/ScreenSaverActive",
+      "value": "0"
+    },
+    {
+      "@odata.type": "#microsoft.graph.omaSettingInteger",
+      "displayName": "Screen timeout on AC power - Extended (seconds)",
+      "description": "Extended screen timeout when plugged in (set to 4 hours)",
+      "omaUri": "./Device/Vendor/MSFT/Policy/Config/Power/DisplayOffTimeoutPluggedIn",
+      "value": 14400
+    },
+    {
+      "@odata.type": "#microsoft.graph.omaSettingInteger",
+      "displayName": "Screen timeout on battery - Extended (seconds)",
+      "description": "Extended screen timeout on battery (set to 4 hours)",
+      "omaUri": "./Device/Vendor/MSFT/Policy/Config/Power/DisplayOffTimeoutOnBattery",
+      "value": 14400
+    }
+  ]
+}

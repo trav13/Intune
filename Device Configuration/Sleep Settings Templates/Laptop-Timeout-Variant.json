@@ -1,0 +1,49 @@
+{
+  "@odata.type": "#microsoft.graph.windows10CustomConfiguration",
+  "displayName": "Laptop Timeout Variant - 2min Screen, 5min Lock",
+  "description": "Laptop variant: 2 minutes to black screen and lock out at 5 minutes",
+  "omaSettings": [
+    {
+      "@odata.type": "#microsoft.graph.omaSettingInteger",
+      "displayName": "Screen timeout on AC power (seconds)",
+      "description": "Specifies the period of inactivity before Windows turns off the display when connected to AC power",
+      "omaUri": "./Device/Vendor/MSFT/Policy/Config/Power/DisplayOffTimeoutPluggedIn",
+      "value": 120
+    },
+    {
+      "@odata.type": "#microsoft.graph.omaSettingInteger",
+      "displayName": "Screen timeout on battery (seconds)",
+      "description": "Specifies the period of inactivity before Windows turns off the display when on battery power",
+      "omaUri": "./Device/Vendor/MSFT/Policy/Config/Power/DisplayOffTimeoutOnBattery",
+      "value": 120
+    },
+    {
+      "@odata.type": "#microsoft.graph.omaSettingInteger",
+      "displayName": "Lock timeout (seconds)",
+      "description": "Specifies the period of inactivity before the device locks and requires reauthentication",
+      "omaUri": "./Device/Vendor/MSFT/Policy/Config/DeviceLock/MaxInactivityTimeDeviceLock",
+      "value": 5
+    },
+    {
+      "@odata.type": "#microsoft.graph.omaSettingString",
+      "displayName": "Enable screen saver",
+      "description": "Enables the screen saver",
+      "omaUri": "./User/Vendor/MSFT/Policy/Config/ControlPolicyConflict/ScreenSaverActive",
+      "value": "1"
+    },
+    {
+      "@odata.type": "#microsoft.graph.omaSettingInteger",
+      "displayName": "Screen saver timeout (seconds)",
+      "description": "Screen saver timeout in seconds",
+      "omaUri": "./User/Vendor/MSFT/Policy/Config/ControlPolicyConflict/ScreenSaverTimeout",
+      "value": 120
+    },
+    {
+      "@odata.type": "#microsoft.graph.omaSettingString",
+      "displayName": "Screen saver: Use blank screen saver",
+      "description": "Uses blank/black screen saver",
+      "omaUri": "./User/Vendor/MSFT/Policy/Config/ControlPolicyConflict/ScreenSaverIsSecure",
+      "value": "1"
+    }
+  ]
+}
