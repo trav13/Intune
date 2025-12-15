@@ -6,7 +6,7 @@
     Import device configuration profiles for Windows, iOS/iPadOS, AndroidEnterprise, macOS platforms stored as JSON files into a specific Intune tenant.
 
 .PARAMETER TenantName
-    Specify the tenant name, e.g. domain.onmicrosoft.com.
+    Specify the tenant name, e.g. mhnnetwork.org.
 
 .PARAMETER Platform
     Specify the given platforms that device configuration profiles should be imported for.
