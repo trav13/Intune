@@ -7,7 +7,7 @@
       "@odata.type": "#microsoft.graph.omaSettingInteger",
       "displayName": "Screen timeout on AC power (seconds)",
       "description": "Specifies the period of inactivity before Windows turns off the display when connected to AC power",
-      "omaUri": "./Device/Vendor/MSFT/Policy/Config/Power/DisplayOffTimeoutOnBattery",
+      "omaUri": "./Device/Vendor/MSFT/Policy/Config/Power/DisplayOffTimeoutPluggedIn",
       "value": 180
     },
     {
@@ -19,7 +19,7 @@
     },
     {
       "@odata.type": "#microsoft.graph.omaSettingInteger",
-      "displayName": "Lock timeout (seconds)",
+      "displayName": "Lock timeout (minutes)",
       "description": "Specifies the period of inactivity before the device locks and requires reauthentication",
       "omaUri": "./Device/Vendor/MSFT/Policy/Config/DeviceLock/MaxInactivityTimeDeviceLock",
       "value": 15

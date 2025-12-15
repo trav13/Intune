@@ -19,7 +19,7 @@
     },
     {
       "@odata.type": "#microsoft.graph.omaSettingInteger",
-      "displayName": "Lock timeout (seconds)",
+      "displayName": "Lock timeout (minutes)",
       "description": "Specifies the period of inactivity before the device locks and requires reauthentication",
       "omaUri": "./Device/Vendor/MSFT/Policy/Config/DeviceLock/MaxInactivityTimeDeviceLock",
       "value": 5
