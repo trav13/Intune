@@ -1,0 +1,56 @@
+{
+  "@odata.type": "#microsoft.graph.windows10CustomConfiguration",
+  "displayName": "Baseline Sleep Timeout - 3min Screen, 15min Lock",
+  "description": "Baseline timeout configuration: Black screen saver at 3 minutes, lock and require domain reauthentication at Windows logon in 15 minutes",
+  "omaSettings": [
+    {
+      "@odata.type": "#microsoft.graph.omaSettingInteger",
+      "displayName": "Screen timeout on AC power (seconds)",
+      "description": "Specifies the period of inactivity before Windows turns off the display when connected to AC power",
+      "omaUri": "./Device/Vendor/MSFT/Policy/Config/Power/DisplayOffTimeoutPluggedIn",
+      "value": 180
+    },
+    {
+      "@odata.type": "#microsoft.graph.omaSettingInteger",
+      "displayName": "Screen timeout on battery (seconds)",
+      "description": "Specifies the period of inactivity before Windows turns off the display when on battery power",
+      "omaUri": "./Device/Vendor/MSFT/Policy/Config/Power/DisplayOffTimeoutOnBattery",
+      "value": 180
+    },
+    {
+      "@odata.type": "#microsoft.graph.omaSettingInteger",
+      "displayName": "Lock timeout (minutes)",
+      "description": "Specifies the period of inactivity before the device locks and requires reauthentication",
+      "omaUri": "./Device/Vendor/MSFT/Policy/Config/DeviceLock/MaxInactivityTimeDeviceLock",
+      "value": 15
+    },
+    {
+      "@odata.type": "#microsoft.graph.omaSettingString",
+      "displayName": "Interactive logon: Require domain authentication",
+      "description": "Requires domain authentication at Windows logon after lock",
+      "omaUri": "./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/InteractiveLogon_DoNotRequireCTRLALTDEL",
+      "value": "<enabled/>"
+    },
+    {
+      "@odata.type": "#microsoft.graph.omaSettingString",
+      "displayName": "Enable screen saver",
+      "description": "Enables the screen saver",
+      "omaUri": "./User/Vendor/MSFT/Policy/Config/ControlPolicyConflict/ScreenSaverActive",
+      "value": "1"
+    },
+    {
+      "@odata.type": "#microsoft.graph.omaSettingInteger",
+      "displayName": "Screen saver timeout (seconds)",
+      "description": "Screen saver timeout in seconds",
+      "omaUri": "./User/Vendor/MSFT/Policy/Config/ControlPolicyConflict/ScreenSaverTimeout",
+      "value": 180
+    },
+    {
+      "@odata.type": "#microsoft.graph.omaSettingString",
+      "displayName": "Screen saver: Use blank screen saver",
+      "description": "Uses blank/black screen saver",
+      "omaUri": "./User/Vendor/MSFT/Policy/Config/ControlPolicyConflict/ScreenSaverIsSecure",
+      "value": "1"
+    }
+  ]
+}
